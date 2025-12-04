@@ -1,0 +1,659 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'courgette', sans-serif;
+}
+
+
+
+body {
+  background-color: transparent;
+   background: linear-gradient(135deg, #0b3d0d, #1a2e1a, #0f1f0f);
+
+  color: #333;
+}
+
+/* Navbar */
+
+/* ===== FIXED NAVBAR WITH LEFT LOGO + RIGHT MENU ===== */
+
+nav {
+    display: flex;
+    justify-content: space-between;   /* left + right */
+    align-items: center;
+    padding: 0 20px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: fixed;
+    top: 0;
+    /* max-width: 1200px; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    width: 100%;
+    z-index: 1000;
+}
+
+/* LEFT SIDE – SHLOOLINI HUNT LOGO */
+.nav-logo {
+    font-size: 32px;          /* Increase size */
+    font-weight: 700;
+    font-family: "Courgette", cursive;  /* Cursive font */
+    color: #0b4c89;
+}
+
+/* RIGHT SIDE MENU */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #0b4c89;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    color: #06325c;
+}
+
+
+/* NAVBAR CONTAINER */
+/* nav {
+    display: flex;
+    justify-content: flex-end;   
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+} */
+
+/* NAV MENU ITEMS */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;                 /* spacing between items */
+}
+
+/* LINKS STYLE */
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #0b4c89;           /* blue text */
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    color: #06325c;
+}
+
+/* .navbar {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 20px 60px;
+  background: rgb(235, 235, 245);
+  color: #679ceb;
+} */
+
+
+/* Give the left and right containers equal space */
+/* .nav-left, .nav-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+} */
+
+.nav-left {
+  justify-content: flex-start;
+  gap: 20px; /* Adds space between the nav links */
+}
+
+/* Push the buttons in the right container to the far right */
+.nav-right {
+  justify-content: flex-end;
+  gap: 15px; /* Adds space between the Login and Register buttons */
+}
+
+/* Ensure the centered logo does not grow or shrink */
+.navbar .logo {
+  flex: 0 0 auto; /* Prevents the logo from taking extra space */
+}
+
+/* Styling for the new Login/Register buttons */
+/* .btn-nav {
+  padding: 8px 20px;
+  border: 1px solid white;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+} */
+
+.btn-nav:hover {
+  /* background-color: white; */
+  color: rgb(1, 26, 1);
+}
+
+/* A slightly different style for the register button to make it stand out */
+/* .btn-nav.register {
+  background-color: #ffd84d;
+  border-color: #ffd84d;
+  color: rgb(1, 26, 1);
+} */
+
+/* .btn-nav.register:hover {
+  background-color: white;
+  border-color: white;
+} */
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+  background: url('https://shooliniuniversity.com/blog/wp-content/uploads/2025/05/DJI_0003.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-text {
+  position: relative;
+  max-width: 700px;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background-color: white;
+  color:rgb(1, 26, 1);
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #ffd84d;
+  transform: scale(1.05);
+}
+
+/* Features Section */
+.features {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #0b4c89;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #e4e8ec;
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 15px 0 10px;
+  color: rgb(1, 26, 1);
+}
+
+.card p {
+  padding: 0 20px 20px;
+  color: #0b4c89;
+}
+
+/* Footer */
+/* footer {
+    width: 100%;
+    padding: 25px 0;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.18);  
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    color: #0b4c89;    
+    margin-top: 40px;
+    position: relative;
+} */
+ /* Footer */
+footer {
+  width: 100%;
+  padding: 25px 0;
+  text-align: center;
+  
+  /* *MISTAKE 1: Remove the second background-color, the first one is likely what is being used* */
+  background-color: #0b4c897a; /* Use a consistent semi-transparent white */
+  
+  /* *MISTAKE 2: ADD THE BLUR EFFECTS!* */
+  backdrop-filter: blur(12px);        /* Add this line */
+  -webkit-backdrop-filter: blur(12px); /* Add this line for compatibility */
+
+  color: #eef1f4; /* same blue shade as your navbar logo */
+  margin-top: 40px;
+  position: relative;
+}
+
+.features{
+    /* background-color: rgb(14, 238, 14); */
+    background-image: url(https://shooliniuniversity.com/blog/wp-content/uploads/2025/05/DJI_0003.jpg);
+}
+
+.registration-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(120deg, #2a2a72, #009ffd);
+  color: #fff;
+}
+
+.form-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px 40px;
+  border-radius: 10px;
+  width: 320px;
+}
+
+.registration-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.btn-submit {
+  width: 100%;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #e68900;
+}
+
+/* === About Us Page Styles === */
+
+
+/* Container for the about us content */
+
+.about-us-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px;
+    text-align: center;
+}
+
+.about-us-container h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.team-intro {
+    font-size: 1.2em;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+
+/* Grid layout for the team member cards */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+
+/* Individual card for each team member */
+
+.team-member-card {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.team-member-card h3 {
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #e50914;
+    /* Red accent color */
+}
+
+.team-member-card h4 {
+    font-size: 1em;
+    font-weight: normal;
+    color: #aaa;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.team-member-card p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/*
+================================
+NEW STYLES ADDED BELOW
+================================
+*/
+
+
+/* === General Styles for New Pages === */
+.content-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #eee;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Add background to the body of the about us page */
+.about-us-body {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://www.toptal.com/designers/subtlepatterns/uploads/double-bubble-outline.png');
+    color: #fff;
+}
+
+.about-us-body .team-member-card {
+    background-color: rgba(20, 20, 20, 0.8); /* Darker card for better contrast */
+    border: 1px solid #444;
+}
+
+
+/* === Attractions Page Styles === */
+.attractions-body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.shiksha.com/mediadata/images/articles/1679218661phpTYlbEn.jpeg') center/cover no-repeat fixed;
+}
+
+.attraction-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.attraction-card {
+    background: rgba(1, 26, 1, 0.8);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.attraction-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.attraction-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.attraction-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.attraction-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.attraction-content p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+
+
+/* === Events Page Styles === */
+/* .events-body {
+    background: linear-gradient(rgba(20, 0, 40, 0.7), rgba(10, 0, 20, 0.7)), url('https://shooliniuniversity.com/blog/wp-content/uploads/2024/02/Moksh-5.jpg') center/cover no-repeat fixed;
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.event-card {
+    background: white;
+    color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(255, 216, 77, 0.4);
+}
+
+.event-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.event-info {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.event-title {
+    font-size: 1.6rem;
+    color: rgb(1, 26, 1);
+}
+
+.event-date {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.event-description {
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.btn-event {
+    display: block;
+    text-align: center;
+    background-color: rgb(1, 26, 1);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: auto;
+}
+
+.btn-event:hover {
+    background-color: #ffd84d;
+    color: rgb(1, 26, 1);
+    transform: scale(1.05);} */
+    .events-body {
+  background-image: url(data:image/jpeg;base64,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);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+}
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 0%;
+    padding-top: 0%;
+}
+
+.event-card {
+    background: burlywood;
+    color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(238, 161, 211, 0.4);
+}
+
+.event-card img {
+    width: 100%;
+    /* height: 220px; */
+    object-fit: cover;
+}
+
+.event-info {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.event-title {
+    font-size: 1.6rem;
+    color: rgb(29, 1, 34);
+}
+
+.event-date {
+    font-size: 0.9rem;
+    color: #a0156b;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.event-description {
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.btn-event {
+    display: block;
+    text-align: center;
+    background-color: rgb(13, 1, 26);
+    color: rgb(248, 243, 243);
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: auto;
+}
+
+.btn-event:hover {
+    background-color: #ffd84d;
+    color: rgb(222, 141, 231);
+    transform: scale(1.05);
+}
+.maps.html
+html {
+  scroll-behavior: smooth;
+}
+
+/* If you have a fixed navbar, add a top offset so the section isn't hidden under it */
+.features {
+  scroll-margin-top: 90px; /* adjust value to match navbar height */
+}

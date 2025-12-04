@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Credits | The Shoolini Hunt</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+
+    body {
+        background: url('https://img.freepik.com/free-vector/hand-painted-pastel-coloured-watercolour-background-design_1048-19610.jpg?semt=ais_hybrid&w=740&q=80') center/cover no-repeat fixed;
+        color: #06033c;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        text-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    }
+
+    p.subtitle {
+        font-size: 1.2rem;
+        color: #0b4c897a;
+        margin-bottom: 40px;
+    }
+
+    /* ===== GLASS CARD STYLE ===== */
+    .card {
+        width: 80%;
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        animation: fadeIn 1.3s ease;
+    }
+
+    .card:hover {
+        transform: scale(1.04);
+        box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+
+    /* Fade animation */
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(30px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+
+    .card h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color: #d20461;
+    }
+
+    .card p {
+        font-size: 1.2rem;
+        color: #0b4c897a;
+    }
+
+    /* Team Grid */
+    .team-grid {
+        margin-top: 25px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .team-member {
+        padding: 20px;
+        background: rgba(255,255,255,0.12);
+        border: 1px solid rgba(255,255,255,0.25);
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        transition: transform 0.4s ease;
+        animation: fadeIn 1.4s ease;
+    }
+
+    .team-member:hover {
+        transform: translateY(-10px);
+    }
+
+    .team-member h3 {
+        color: #06033c;
+        font-size: 1.4rem;
+        margin-bottom: 5px;
+    }
+
+    .team-member p {
+        font-size: 1rem;
+        color: #eaeaea;
+    }
+
+</style>
+</head>
+<body>
+
+<h1>About Us-The Team Behind The Shoolini Hunt</h1>
+<p class="subtitle">Built with coffee, code and a little bit of panic !</p>
+
+<!-- PROFESSOR CREDIT -->
+<div class="card">
+    <h2>MENTOR SPOTLIGHT</h2>
+    <p><strong>Shrey sir-The calm in our coding storms.</strong></p>
+    <p>Known for:</p>
+    <p>✓Turning errors into lessons</p>
+    <p>✓Explaining CSS like it's poetry</p>
+    <p>✓Smiling even when we forget the closing tags T-T.</p>
+</div>
+
+<!-- TEAM MEMBERS -->
+<div class="card">
+    <h2>Our Team</h2>
+
+    <div class="team-grid">
+        <div class="team-member">
+            <h3>Stuti Miglani</h3>
+        </div>
+
+        <div class="team-member">
+            <h3>Gopinath Sau</h3>
+        </div>
+
+        <div class="team-member">
+            <h3>Kushiika Thukral</h3>
+        </div>
+
+       
+    </div>
+</div>
+
+</body>
+</html>

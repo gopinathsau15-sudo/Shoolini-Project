@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Shoolini Hunt - FAQs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #e8f5e9, #f3e5f5);
+      color: #333;
+      overflow-x: hidden;
+    }
+  
+
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+      animation: fadeDown 1s ease;
+    }
+
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4rem;
+      color: #72f59b;;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    /* FAQ Container Styling */
+    .faq-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 60px 60px; /* Increased vertical & horizontal gap */
+      padding: 60px 50px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* Each Card */
+    .faq-card {
+      width: 280px;
+      height: 190px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      position: relative;
+      perspective: 1000px;
+      transition: transform 0.5s ease, box-shadow 0.3s ease;
+      transform: translateY(30px);
+      opacity: 0;
+      animation: fadeUp 1s ease forwards;
+    }
+
+    .faq-card:nth-child(odd) { animation-delay: 0.2s; }
+    .faq-card:nth-child(even) { animation-delay: 0.4s; }
+
+    .faq-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .faq-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+
+    .faq-card.active .faq-inner {
+      transform: rotateY(180deg);
+    }
+
+    .faq-front, .faq-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 20px;
+      overflow: hidden;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .faq-front {
+      background: #72f59b;;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    .faq-back {
+      background: #f9f9f9;
+      color: #333;
+      transform: rotateY(180deg);
+      font-size: 1rem;
+      line-height: 1.5;
+      padding: 25px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #72f59b;;;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .faq-card {
+        width: 90%;
+        height: 170px;
+      }
+      .faq-container {
+        gap: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>FAQs</h1>
+    <p> When in doubt read this; When still in doubt ask a senior 🌿</p>
+  </header>
+ 
+
+
+  <section class="faq-container">
+    <div class="faq-card"><div class="faq-inner"><div class="faq-front">Is this an official university website?</div><div class="faq-back">No, it's a student driven initiative created under guidance of our professor Mr Shrey Khandelwal. The goal is to enhance the student experience, not replace the official site.</div></div></div>
+    <div class="faq-card"><div class="faq-inner"><div class="faq-front">What are hostel facilities like?</div><div class="faq-back">Hostels are comfortable and well maintained with Wi-Fi, hot water ,laundry and common rooms. There are seperate hostels for boys and girls with 24*7 security.</div></div></div>
+    <div class="faq-card"><div class="faq-inner"><div class="faq-front">Is Wi-Fi available throughout the campus?</div><div class="faq-back">Yes , the entire campus is Wi-Fi enabled.</div></div></div>
+    <div class="faq-card"><div class="faq-inner"><div class="faq-front">What kind of clubs and societies does the university have?</div><div class="faq-back">From tech and innovation to drama, dance , debate, photography and music- There is a club for every interest.</div></div></div>
+    <div class="faq-card"><div class="faq-inner"><div class="faq-front">Is the academic schedule too hectic or balanced?</div><div class="faq-back">It's well structured; Classes are interactive and balanced. So you will learn and still have time to explore campus life.</div></div></div>
+    <div class="faq-card"><div class="faq-inner"><div class="faq-front">Do seniors rag juniors?</div><div class="faq-back">NOPE! Shoolini has a strict anti-ragging policy but seniors do guide , help and sometimes tease in fun ways.</div></div></div>
+    <div class="faq-card"><div class="faq-inner"><div class="faq-front">Is there a medical facility on campus?</div><div class="faq-back">Yes, there is a health care centre with qualified doctors and tie ups with mostly hospitals for emergencies.</div></div></div>
+    <!-- <div class="faq-card"><div class="faq-inner"><div class="faq-front"></div>How to make friends if you are shy?<div class="faq-back">Just step out! Join clubs , attend events, chill in the cafeteria - everyone here's new once, so don't overhtink it.</div></div></div> -->
+    <div class="faq-card"><div class="faq-inner"><div class="faq-front">How's the weather?</div><div class="faq-back">Solan weather is mood-swinging:- warm in day; chilly at night. Do keep hoodies , jacket and a blanket ready!</div></div></div>
+    <div class="faq-card"><div class="faq-inner"><div class="faq-front">TIP OF THE DAY </div><div class="faq-back">Never forget to carry umbrella!</div></div></div>
+  </section>
+
+  <footer>
+    <p>Part of <strong>The Shoolini Hunt</strong> | <a href="index.html">Return Home</a></p>
+  </footer>
+
+  <script>
+    const faqCards = document.querySelectorAll('.faq-card');
+    faqCards.forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
